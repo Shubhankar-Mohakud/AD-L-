@@ -91,6 +91,12 @@ print(df_scaled[['Customer ID', 'Age_Scaled', 'Income_Scaled']])
 print("\n" + "="*65 + "\n")
 
 # Final DataFrame with all preprocessing
+
+# Set display width to show all columns
+pd.set_option('display.width', 1000)
+pd.set_option('display.max_columns', None)
+
+
 print("FINAL PREPROCESSED DATAFRAME:")
 print("-" * 40)
 final_df = df_scaled[['Customer ID', 'Age_Scaled', 'Income_Scaled', 
