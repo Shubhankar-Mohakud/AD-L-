@@ -128,8 +128,6 @@ plt.show()
 print("\n" + "="*70)
 print("KEY INSIGHTS FROM CORRELATION ANALYSIS")
 print("="*70)
-print("\nFull Correlation Matrix:")
-print(correlation_matrix.round(3))
 
 # Find strongest positive correlations (excluding diagonal)
 print("\n\nStrongest Positive Correlations (>0.3):")
