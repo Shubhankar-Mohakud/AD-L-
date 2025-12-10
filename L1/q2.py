@@ -2,12 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
-import kagglehub
 
-# Download latest version
-path = kagglehub.dataset_download("abdullahmeo/spotify-analysis-and-visualization")
-
-print("Path to dataset files:", path)
 
 file_path = Path(r"C:\Users\KIIT0001\Downloads\archive\spotify_analysis_dataset.csv")
 df = pd.read_csv(file_path)
