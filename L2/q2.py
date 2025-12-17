@@ -40,9 +40,9 @@ print("R² Score:", round(r2, 3))
 plt.figure(figsize=(7, 6))
 plt.scatter(y_test, y_pred, color='blue', label='Data points')
 plt.plot([y_test.min(), y_test.max()], 
-        [y_test.min(), y_test.max()], 
-        linewidth=2, 
-        color='red', label='Regression line')
+         [y_test.min(), y_test.max()], 
+         linewidth=2, 
+         color='red', label='Regression line')
 
 plt.xlabel("Actual Price")
 plt.ylabel("Predicted Price")
