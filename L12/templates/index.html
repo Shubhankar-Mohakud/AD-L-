@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Calculator</title>
+    <style>
+        :root {
+            --bg: #f3f4f6;
+            --card: #ffffff;
+            --text: #111827;
+            --border: #d1d5db;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 1rem;
+        }
+
+        .card {
+            width: min(100%, 400px);
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        h2 {
+            margin: 0 0 0.9rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .inputs {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.6rem;
+            margin-bottom: 0.8rem;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.6rem 0.65rem;
+            font-size: 0.95rem;
+            color: var(--text);
+            background: #fff;
+            outline: none;
+            appearance: textfield;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .operations {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+        }
+
+        button {
+            border: 1px solid var(--border);
+            background: #fff;
+            color: var(--text);
+            border-radius: 8px;
+            padding: 0.55rem 0;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 0.9rem;
+            padding: 0.65rem;
+            border-radius: 8px;
+            background: #fff;
+            border: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .result strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h2>Calculator</h2>
+
+        <form method="POST">
+            <div class="inputs">
+                <input type="number" name="num1" step="any" required placeholder="First number">
+                <input type="number" name="num2" step="any" required placeholder="Second number">
+            </div>
+
+            <div class="operations">
+                <button type="submit" name="operation" value="add">+</button>
+                <button type="submit" name="operation" value="subtract">-</button>
+                
+                <button type="submit" name="operation" value="multiply">*</button>
+                <button type="submit" name="operation" value="divide">/</button>
+            </div>
+        </form>
+
+        <div class="result"><strong>Result:</strong> {{ result if result is not none else '—' }}</div>
+    </main>
+</body>
+</html>
