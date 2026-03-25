@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Regression App - Home</title>
+</head>
+<body>
+  <h2>Linear Regression App</h2>
+  <br>
+  <a href="/train">Train Model</a> &nbsp;|&nbsp; <a href="/predict">Predict</a>
+  <br>
+  <p><b>Roll Number:</b> {{ roll }} &nbsp;|&nbsp; <b>R = {{ r }}</b> (odd -> Y = Y - R/3)</p>
+  <h3>Dataset Preview</h3>
+  <table border="1" cellpadding="6">
+    <tr><th>X</th><th>Y</th></tr>
+    {% for x, y in rows %}
+    <tr>
+      <td>{{ x }}</td>
+      <td>{{ y }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+  
+</body>
+</html>

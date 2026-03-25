@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Regression App - Predict</title>
+</head>
+<body>
+  <h2>Predict Y</h2>
+  <form method="POST">
+    Enter X: <input name="x" type="number" step="any" required>
+    <input type="submit" value="Predict">
+  </form>
+
+  {% if y_pred is not none %}
+  <p><b>X = {{ x_val }} -> Predicted Y = {{ y_pred }}</b></p>
+  {% endif %}
+
+  <br><a href="/">Home</a> &nbsp;|&nbsp; <a href="/train">Train</a>
+</body>
+</html>
